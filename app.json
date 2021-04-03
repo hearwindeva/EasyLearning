@@ -1,10 +1,13 @@
 {
+  "entryPagePath": "pages/index/index",
   "useExtendedLib": {
     "kbone": true,
     "weui": true
   },
   "pages":[
+    "pages/messageForm/messageform",
     "pages/index/index",
+    "pages/indexold/index",
     "pages/self/self",
     "pages/action/action",
     "pages/actionlist/actionlist",
@@ -14,7 +17,6 @@
     "pages/myAccount/myAccount",
     "pages/opinion/opinion",
     "pages/logs/logs"
-
   ],
   "window":{
     "backgroundTextStyle":"light",

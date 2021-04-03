@@ -17,23 +17,23 @@
 
     <view class="page__bd">
         <mp-cells ext-class="my-cells" title="我的">
-            <mp-cell link hover value="我的账户">
+            <mp-cell link hover value="我的账户" bindtap="openAccount">
                 <mp-icon slot="icon" type="field" icon="me" size="{{23}}" color="red" style="margin-right: 12px"></mp-icon>
             </mp-cell>
         </mp-cells>
         <mp-cells ext-class="my-cells" title="业务">
-            <mp-cell link hover value="我要做家教" footer="完善信息">
+            <mp-cell link hover value="我要做家教" footer="完善信息" bindtap="openBookList">
                 <mp-icon slot="icon" type="field" icon="add-friends" size="{{23}}" color="#ef5b9c" style="margin-right: 12px"></mp-icon>
             </mp-cell>
-            <mp-cell link hover value="我要请家教">
+            <mp-cell link hover value="我要请家教" bindtap="openBookList">
                 <mp-icon slot="icon" type="field" icon="contacts" size="{{23}}" color="#7fb80e" style="margin-right: 12px"></mp-icon>
             </mp-cell>
         </mp-cells>
         <mp-cells ext-class="my-cells" title="关于">
-            <mp-cell link hover value="意见反馈">
+            <mp-cell link hover value="意见反馈" bindtap="completeMessage">
                 <mp-icon slot="icon" type="field" icon="sticker" size="{{23}}" color="#6950a1" style="margin-right: 12px"></mp-icon>
             </mp-cell>
-            <mp-cell link hover value="关于我们">
+            <mp-cell link hover value="关于我们" bindtap="aboutUs">
                 <mp-icon slot="icon" type="field" icon="note" size="{{23}}" color="#33a3dc" style="margin-right: 12px"></mp-icon>
             </mp-cell>
             <mp-cell link hover value="联系合作">

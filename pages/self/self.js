@@ -66,6 +66,12 @@ Page({
     })
   },
 
+  completeMessage: function() {
+    wx.navigateTo({
+      url: '../messageForm/messageform',
+    })
+  },
+
   login: function () {
     //认证信息及个人信息切换
     var that = this;

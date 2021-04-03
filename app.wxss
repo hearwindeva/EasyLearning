@@ -3,6 +3,14 @@ page{
   background: #f0f0f0;
 }
 
+.blockContainer {
+  padding: 8rpx;
+}
+
+.itemContainer {
+  padding: 8rpx;
+}
+
 .container {
   height: 100%;
   display: flex;
