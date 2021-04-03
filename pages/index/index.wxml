@@ -129,7 +129,8 @@
         <view class="moinfont">21人已申请</view>
       </view>
     </navigator>
-
+    
+    <!--<mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}"></mp-tabbar>-->
   </view>
 </view>
 

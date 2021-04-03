@@ -20,7 +20,22 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000 
+    duration: 1000,
+    list: [{
+      "text": "首页",
+      "iconPath": "../../image/home.png",
+      "selectedIconPath": "../../image/homeactive.png"
+    },
+    {
+      "text": "活动",
+      "iconPath": "../../image/action.png",
+      "selectedIconPath": "../../image/actionactive.png"
+    },
+    {
+      "text": "我的",
+      "iconPath": "../../image/selfCenter.png",
+      "selectedIconPath": "../../image/selfCenter-selected.png"
+    }]
   },
   onShareAppMessage: function (res) {
     if (res.from === 'button') {

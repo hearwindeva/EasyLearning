@@ -14,7 +14,7 @@
     "pages/myAccount/myAccount",
     "pages/opinion/opinion",
     "pages/logs/logs"
-    
+
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -23,6 +23,7 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    
     "color": "#888",
     "selectedColor": "#4ec5c9",
     "backgroundColor": "#fff",
