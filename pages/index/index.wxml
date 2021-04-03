@@ -1,17 +1,141 @@
-<view>
-  <swiper indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
         <image src="{{item}}" class="slide-image"/>
       </swiper-item>
     </block>
-  </swiper>
-</view>
+</swiper>
 
-<view class="blockContainer">
-  <view class="flex-wrp" style="flex-direction:row;">
-    <button class="weui-btn" type="primary">我要请家教</button>
-    <button class="weui-btn" type="default">我要做教员</button>
+<view class="plate">
+  <navigator url="/pages/action/action" open-type="switchTab" hover-class="other-navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{a1src}}"></image>
+       </view>
+       <text class="plate-info">
+        活动资讯
+       </text>
+  </navigator>
+  <navigator url="/pages/signup/signup" open-type="switchTab" hover-class="other-navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{a2src}}"></image>
+       </view>
+       <text class="plate-info">
+        预约课程
+       </text>
+  </navigator>
+  <navigator url="/pages/teacher/teacher" hover-class="navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{a4src}}"></image>
+       </view>
+       <text class="plate-info">
+        名师简介
+       </text>
+  </navigator>
+  <navigator url="/pages/aboutUs/aboutUs" hover-class="navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{a3src}}"></image>
+       </view>
+       <text class="plate-info">
+        联系我们
+       </text>
+  </navigator>
+</view>
+<view class="clear"></view>
+<view class="appointment">
+ <view class="app-title">中小学</view>
+  <view class="app-moduler">
+
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>初中数学</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+          <text class="moinfont .text-oneLine">吴老师</text>
+        </view>
+        <view class="moinfont">12人已申请</view>
+      </view>
+    </navigator>
+    
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>英语(适用于中小学)</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+          <text class="moinfont .text-oneLine">蔡老师</text>
+        </view>
+        <view class="moinfont">17人已申请</view>
+      </view>
+    </navigator>
+
   </view>
 </view>
+<view class="clear"></view>
+<view class="appointment">
+ <view class="app-title">大学</view>
+  <view class="app-moduler">
+
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>高中数学</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+          <text class="moinfont .text-oneLine">吴老师</text>
+        </view>
+        <view class="moinfont">32人已申请</view>
+      </view>
+    </navigator>
+    
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>大学物理</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+          <text class="moinfont .text-oneLine">蔡老师</text>
+        </view>
+        <view class="moinfont">21人已申请</view>
+      </view>
+    </navigator>
+    
+    <!--<mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}"></mp-tabbar>-->
+  </view>
+</view>
+
+<!-- <navigator class="more" url="/pages/signup/signup" open-type="switchTab" hover-class="other-navigator-hover">
+  <view class="more-info">查看更多</view>
+  <view class="icon-jt"><image src="{{jtsrc}}" class="iconjtimg"></image></view>
+</navigator> -->
+<view class="clear"></view>

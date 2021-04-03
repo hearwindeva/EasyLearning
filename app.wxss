@@ -1,14 +1,8 @@
 /**app.wxss**/
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
 page{
   background: #f0f0f0;
-}
-
-.blockContainer {
-  padding: 8rpx;
-}
-
-.itemContainer {
-  padding: 8rpx;
 }
 
 .container {
