@@ -1,12 +1,16 @@
-/* pages/teacher/teacher.wxss */
+/* pages/index/university/university.wxss */
+page{
+  background: #eeeeee;
+}
 .con-teacher{
   display: flex;
   flex-direction:row;
   width:90%;
   height:320rpx;
-  border: 2rpx solid #eeeeee;
+  border: 5rpx solid #ffffff;
   padding:10rpx 10rpx;
   margin:10rpx auto;
+  background: #ffffff;
 }
 .con-trimg{
   width:260rpx;
@@ -22,5 +26,5 @@
 }
 .coin-info{
   line-height: 60rpx;
-  font-size: 28rpx;
+  font-size: 24rpx;
 }

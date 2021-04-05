@@ -10,7 +10,7 @@ page {
   height:400rpx;
 }
 .appointment{
-  height: 410rpx;
+  height: 430rpx;
 }
 .plate{
   height:240rpx;

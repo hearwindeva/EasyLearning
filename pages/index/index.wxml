@@ -17,7 +17,7 @@
         活动资讯
        </text>
   </navigator>
-  <navigator url="/pages/signup/signup" open-type="switchTab" hover-class="other-navigator-hover" class="plate-item">
+  <navigator url="/pages/index/signup/signup" hover-class="navigator-hover"  class="plate-item">
      <view class="plate-img">
        <image src="{{a2src}}"></image>
        </view>
@@ -47,7 +47,7 @@
  <view class="app-title">中小学</view>
   <view class="app-moduler">
 
-    <navigator url="url" class="mod-item">
+    <navigator url="/pages/index/primary/primary" class="mod-item">
       <view class="mod-signup">
         <image src="{{signupimg}}"></image>
       </view>
@@ -60,13 +60,13 @@
       <view class="mod-info">
         <view class="mod-icon">
           <image src="{{iconsrc}}" class="icon"></image>
-          <text class="moinfont .text-oneLine">吴老师</text>
+          <text class="moinfont text-oneLine">吴老师</text>
         </view>
         <view class="moinfont">12人已申请</view>
       </view>
     </navigator>
     
-    <navigator url="url" class="mod-item">
+    <navigator url="/pages/index/primary/primary" class="mod-item">
       <view class="mod-signup">
         <image src="{{signupimg}}"></image>
       </view>
@@ -92,7 +92,7 @@
  <view class="app-title">大学</view>
   <view class="app-moduler">
 
-    <navigator url="url" class="mod-item">
+    <navigator url="/pages/index/university/university" class="mod-item">
       <view class="mod-signup">
         <image src="{{signupimg}}"></image>
       </view>
@@ -111,7 +111,7 @@
       </view>
     </navigator>
     
-    <navigator url="url" class="mod-item">
+    <navigator url="/pages/index/university/university" class="mod-item">
       <view class="mod-signup">
         <image src="{{signupimg}}"></image>
       </view>

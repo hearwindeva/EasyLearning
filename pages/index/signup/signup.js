@@ -1,11 +1,13 @@
-// pages/teacherlist/teacherlist.js
+// pages/index/signup/signup.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    trimg:"../../image/1.jpg",
+    signupimg:'../../../image/signup.png',
+    imgsrc:'../../../image/img4.jpg',
+    iconsrc:'../../../image/usercount.png',
   },
 
   /**

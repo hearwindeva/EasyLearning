@@ -1,0 +1,80 @@
+<!--pages/index/signup/signup.wxml-->
+<view class="appointment">
+  <view class="app-moduler">
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>初中数学</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+          <text class="moinfont text-oneLine">吴老师</text>
+        </view>
+        <view class="moinfont">32人已申请</view>
+      </view>
+    </navigator>
+    
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>高等数学</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+          <text class="moinfont .text-oneLine">吴老师</text>
+        </view>
+        <view class="moinfont">17人已申请</view>
+      </view>
+    </navigator>
+
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>英语</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+          <text class="moinfont .text-oneLine">吴老师</text>
+        </view>
+        <view class="moinfont">20人已申请</view>
+      </view>
+    </navigator>
+
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>物理</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+          <text class="moinfont .text-oneLine">吴老师</text>
+        </view>
+        <view class="moinfont">9人已申请</view>
+      </view>
+    </navigator>
+   </view>
+</view>

@@ -1,11 +1,15 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/community/index",
+    "pages/index/signup/signup",
+    "pages/index/primary/primary",
+    "pages/index/university/university",
     "pages/self/self",
     "pages/self/contactUs/contactUs",
     "pages/self/feedback/feedback",
     "pages/self/addTeacher/messageform",
-    "pages/self/msgform/msgform",
+    "pages/self/msgform/msgform",                                                                     
     "pages/self/addStudent/index",
     "pages/self/myAccount/myAccount",
     "pages/self/myAccount/changeNick/index",
@@ -37,8 +41,8 @@
         "selectedIconPath": "image/homeactive.png"
       },
       {
-        "pagePath": "pages/action/action",
-        "text": "活动",
+        "pagePath": "pages/community/index",
+        "text": "社区",
         "iconPath": "image/action.png",
         "selectedIconPath": "image/actionactive.png"
       },

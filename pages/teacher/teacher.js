@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    trimg:"../../image/1.jpg",
   },
 
   /**

@@ -1,2 +1,25 @@
 <!--pages/teacher/teacher.wxml-->
-<text>pages/teacher/teacher.wxml</text>
+<view class="content">
+  <view class="page">
+    <view class="page__bd">
+      <mp-cells title="老师介绍">
+            <mp-cell link url="/pages/teacherlist/teacherlist" value="吴老师" footer="教学幽默，通俗易懂">
+                <image slot="icon" src="{{trimg}}" style="margin-right: 16px;vertical-align: middle;width:180rpx; height: 180rpx;"></image>
+            </mp-cell>
+            <mp-cell link url="/pages/teacherlist/teacherlist" value="吴老师" footer="教学幽默，通俗易懂">
+                <image slot="icon" src="{{trimg}}" style="margin-right: 16px;vertical-align: middle;width:180rpx; height: 180rpx;"></image>
+            </mp-cell>
+            <mp-cell link url="/pages/teacherlist/teacherlist" value="吴老师" footer="教学幽默，通俗易懂">
+                <image slot="icon" src="{{trimg}}" style="margin-right: 16px;vertical-align: middle;width:180rpx; height: 180rpx;"></image>
+            </mp-cell>
+            <mp-cell link url="/pages/teacherlist/teacherlist" value="吴老师" footer="教学幽默，通俗易懂">
+                <image slot="icon" src="{{trimg}}" style="margin-right: 16px;vertical-align: middle;width:180rpx; height: 180rpx;"></image>
+            </mp-cell>
+            <mp-cell link url="/pages/teacherlist/teacherlist" value="吴老师" footer="教学幽默，通俗易懂">
+                <image slot="icon" src="{{trimg}}" style="margin-right: 16px;vertical-align: middle;width:180rpx; height: 180rpx;"></image>
+            </mp-cell>
+        </mp-cells>
+    </view>
+</view>
+
+</view>

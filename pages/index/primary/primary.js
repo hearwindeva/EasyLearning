@@ -1,20 +1,31 @@
-// pages/teacherlist/teacherlist.js
+// pages/index/primary/primary.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    trimg:"../../image/1.jpg",
+    trimg:'../../../image/img4.jpg',
+    actionSheetHidden: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
+  bindViewTap() {
+    wx.showToast({
 
+      title: '报名成功',
+ 
+      icon: 'success',
+ 
+      duration: 2000//持续的时间
+ 
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
