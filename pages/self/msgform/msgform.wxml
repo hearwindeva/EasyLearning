@@ -2,7 +2,14 @@
 <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
     <view class="page__bd">
         <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+            <mp-cells title="性别">
+                <mp-checkbox-group prop="radio" multi="{{false}}" bindchange="radioChange">
+                    <mp-checkbox wx:for="{{radioItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                </mp-checkbox-group>
+            </mp-cells>
+            
             <mp-cells title="个人基本信息">
+                
                 <mp-cell prop="name" title="联系人姓名" ext-class="">
                     <input bindinput="formInputChange" data-field="name" class="weui-input" placeholder="请输入联系人姓名"/>
                 </mp-cell>
@@ -16,22 +23,6 @@
                 <mp-cell prop="vcode" title="验证码" ext-class=" weui-cell_vcode">
                     <input bindinput="formInputChange" data-field="vcode" class="weui-input" placeholder="请输入验证码"/>
                     <image slot="footer" class="weui-vcode-img" src="../images/vcode.jpg" style="width: 108px"></image>
-                </mp-cell>
-            </mp-cells>
-            <mp-cells title="学员信息">
-                <mp-cell prop="qq" title="QQ号" ext-class="">
-                    <input bindinput="formInputChange" data-field="qq" class="weui-input" placeholder="请输入QQ号"/>
-                </mp-cell>
-                <mp-cell prop="grade" title="学员年级" ext-class="">
-                    <picker data-field="grade" mode="multiSelector" value="{{gradeIndex}}" range="{{grade}}" bindcolumnchange="stageChange">
-                        <view class="weui-input">{{date}}</view>
-                    </picker>
-                </mp-cell>
-                <mp-cell prop="address" title="住所" ext-class="">
-                    <input bindinput="formInputChange" data-field="address" class="weui-input" placeholder="请输入学员住所"/>
-                </mp-cell>
-                <mp-cell prop="teach_address" title="授课地点" ext-class="">
-                    <input bindinput="formInputChange" data-field="teach_address" class="weui-input" placeholder="请输入授课地点"/>
                 </mp-cell>
             </mp-cells>
         </mp-form>
@@ -51,5 +42,8 @@
         <view class="weui-btn-area">
             <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
         </view>
+        <mp-dialog title="此服务尚未完成" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+            <view>由于服务器尚未搭建完成，无法完成操作，目前该项目尚在开发中，敬请期待。</view>
+        </mp-dialog>
     </view>
 </view>

@@ -1,18 +1,26 @@
-// pages/aboutUs/aboutUs.js
+// pages/self/feedback/feedback.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    showOneButtonDialog: false,
+    oneButton: [{text: '确定'}],
 
   },
 
-  toAuth() {
-    wx.navigateTo({
-      url: '../self/contactUs/contactUs',
+  submitForm() {
+    this.setData({
+      showOneButtonDialog: true
     })
   },
+  tapDialogButton(e) {
+      this.setData({
+          showOneButtonDialog: false
+      })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,14 +34,7 @@ Page({
   onReady: function () {
 
   },
-  openLocation:function(){
-    wx.openLocation({
-        latitude: app.globalData.latitude,
-        longitude: app.globalData.longitude,
-        scale: 15,
-        name:"湖南理工学院"
-    })
-  },
+
   /**
    * 生命周期函数--监听页面显示
    */

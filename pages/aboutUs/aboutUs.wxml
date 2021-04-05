@@ -1,23 +1,27 @@
 <!--pages/aboutUs/aboutUs.wxml-->
 <loading hidden="{{ !loading }}">加载中...</loading>
 <view style="margin:10px 15px 10px 15px">
-    <view class="photo item" style="height:300px;line-height: 24px;">
+    <view class="photo item" style="height:500px;line-height: 24px;border-radius: 25rpx">
         <view class="photo-box" style="width:100px;margin:0 auto;padding-top:10px;">
             <image src="../../image/us.png" style="border-radius: 100px" class="personal_logo" id="personal_logo"></image>
         </view>
-        <view class="feedbackText">
-            <text>教易学主要为中小学生，大学生量身定制的学习平台</text>
+        <view class="feedbackText" style="border-radius: 25rpx">
+            <text>
+                Hi! 尊敬的用户~欢迎使用教易学家教平台！\n
+                该项目是我团队开发的一款发布于微信小程序的，针对大学生兼职家教的需求与广大家长对家庭教师的需求而开发的一款家教平台。扩展中心也将不定期更新一些针对平台所出现的问题的解决方案。\n
+                如果您有一些好的想法，请在“我的 -> 联系我们”中提交给我们，我们将会根据您的建议进一步完善教易学家教平台。\n
+                请用户放心使用使用教易学家教平台，我们承诺不会泄露任何用户信息，感谢支持！\n
+                更多功能敬请期待！
+            </text>
         </view>
     </view>
     <view class="h1"></view>
-    <view class="item" style='padding:5px 15px 0px 15px;'>
+    <view class="item" style='padding:5px 15px 0px 15px;border-radius: 25rpx'>
         <text style='margin-left:10px;margin-top:5px;'>团队地址:</text>
         <span class="value-right" bindtap="openLocation">湖南理工学院</span>
     </view>
     <view class="h1"></view>
-    <view class="item" style='padding:5px 5%;'>
-        <button class='submit' bindtap="toAuth" type="submit">
-            联系我们
-        </button>
-    </view>
+    <button class='submit' bindtap="toAuth" type="submit">
+        联系我们
+    </button>
 </view>

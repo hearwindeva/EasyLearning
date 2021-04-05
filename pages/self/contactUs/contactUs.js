@@ -1,13 +1,24 @@
-// pages/myAccount/myAccount.js
+// pages/self/contactUs/contactUs.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    showOneButtonDialog: false,
+    oneButton: [{text: '确定'}],
   },
 
+  submitForm() {
+    this.setData({
+      showOneButtonDialog: true
+    })
+  },
+  tapDialogButton(e) {
+      this.setData({
+          showOneButtonDialog: false
+      })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

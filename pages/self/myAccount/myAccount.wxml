@@ -1,0 +1,40 @@
+<view class="Page">
+    <view class="usermsgblock" style="margin-top: 20rpx">
+        <view style="padding: 50rpx">
+            <view class="userinfo">
+                <view class="userinfo-avatar">
+                    <open-data type="userAvatarUrl"></open-data>
+                </view>
+                <open-data type="userNickName"></open-data>
+            </view>
+        </view>
+        <mp-cells ext-class="my-cells" title="用户信息">
+            <mp-cell link hover value="用户昵称" bindtap="changeNick">
+                <open-data slot="footer" type="userNickName"></open-data>
+            </mp-cell>
+        </mp-cells>
+        <mp-cells ext-class="my-cells" title="教易学身份">
+            <mp-cell value="真实姓名" footer="暂未补全信息"></mp-cell>
+            <mp-cell value="用户身份" footer="暂未选择用户身份"></mp-cell>
+        </mp-cells>
+        <mp-cells ext-class="my-cells" title="联系方式">
+            <mp-cell value="联系电话" footer="暂未补全信息"></mp-cell>
+            <mp-cell value="邮箱" footer="暂未补全信息"></mp-cell>
+            <mp-cell value="QQ号" footer="暂未补全信息"></mp-cell>
+        </mp-cells>
+        <view slot="button" style="margin-top: 20rpx">
+            <button class="weui-btn" type="primary" bindtap="addmsg">完善个人信息</button>
+        </view>
+        <view slot="button" style="margin-top: 20rpx">
+            <button class="weui-btn" type="default" bindtap="open">选择用户身份</button>
+        </view>
+    </view>
+    <mp-half-screen-dialog 
+        bindbuttontap="buttontap"
+        show="{{show}}"
+        maskClosable="{{false}}" 
+        title="选择用户身份" 
+        desc="请选择您想要成为的用户身份"
+        tips="二者均需要补全信息"
+        buttons="{{buttons}}"></mp-half-screen-dialog>
+</view>

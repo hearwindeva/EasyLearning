@@ -2,17 +2,20 @@
   "pages":[
     "pages/index/index",
     "pages/self/self",
-    "pages/self/addTeacher/index",
+    "pages/self/contactUs/contactUs",
+    "pages/self/feedback/feedback",
+    "pages/self/addTeacher/messageform",
+    "pages/self/msgform/msgform",
     "pages/self/addStudent/index",
+    "pages/self/myAccount/myAccount",
+    "pages/self/myAccount/changeNick/index",
     "pages/action/action",
     "pages/actionlist/actionlist",
     "pages/teacher/teacher",
     "pages/teacherlist/teacherlist",
     "pages/aboutUs/aboutUs",
-    "pages/myAccount/myAccount",
     "pages/opinion/opinion",
     "pages/logs/logs"
-
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -21,7 +24,7 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    
+    "font-size": "10rpx",
     "color": "#888",
     "selectedColor": "#4ec5c9",
     "backgroundColor": "#fff",

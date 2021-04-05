@@ -1,18 +1,29 @@
-// pages/aboutUs/aboutUs.js
+// pages/messageForm/messageform.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    showOneButtonDialog: false,
+    oneButton: [{text: '确定'}],
+    radioItems: [
+      {name: '男', value: '0', checked: true},
+      {name: '女', value: '1'}
+    ],
   },
 
-  toAuth() {
-    wx.navigateTo({
-      url: '../self/contactUs/contactUs',
+  submitForm() {
+    this.setData({
+      showOneButtonDialog: true
     })
   },
+  tapDialogButton(e) {
+    this.setData({
+        showOneButtonDialog: false
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -24,16 +35,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    // this.setData({'grade[1]': ['一年级','二年级','三年级','四年级','五年级','六年级']});
+  },
 
-  },
-  openLocation:function(){
-    wx.openLocation({
-        latitude: app.globalData.latitude,
-        longitude: app.globalData.longitude,
-        scale: 15,
-        name:"湖南理工学院"
-    })
-  },
   /**
    * 生命周期函数--监听页面显示
    */

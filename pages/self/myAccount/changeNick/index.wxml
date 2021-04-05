@@ -1,0 +1,12 @@
+<!--pages/self/myAccount/changeNick/index.wxml-->
+<mp-cells title="更改昵称">
+    <mp-cell>
+        <input bindinput="formInputChange" data-field="qq" class="weui-input" placeholder="请输入新的昵称"/>
+    </mp-cell>
+</mp-cells>
+<view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+</view>
+<mp-dialog title="此服务尚未完成" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+    <view>由于服务器尚未搭建完成，无法完成操作，目前该项目尚在开发中，敬请期待。</view>
+</mp-dialog>
