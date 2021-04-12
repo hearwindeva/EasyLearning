@@ -1,0 +1,5 @@
+<!--miniprogram/pages/community/index.wxml-->
+<cu-custom bgColor="bg-gradual-pink">
+  <view slot="content">社区_EZL_debug</view>
+</cu-custom>
+<view class="intro">社区</view>

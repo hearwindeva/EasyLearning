@@ -1,8 +1,0 @@
-/* pages/self/msgform/msgform.wxss */
-.usermsgblock {
-  height: 100%;
-  width: 90%;
-  border-radius: 25rpx;
-  padding: 20rpx;
-  margin: auto;
-}

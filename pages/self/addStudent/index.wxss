@@ -1,8 +1,0 @@
-/* pages/self/addTeacher/index.wxss */
-.block {
-  height: 100%;
-  width: 92%;
-  border-radius: 25rpx;
-  padding: 20rpx;
-  margin: auto;
-}

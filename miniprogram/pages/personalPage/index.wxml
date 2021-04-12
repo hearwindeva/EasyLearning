@@ -1,0 +1,5 @@
+<!--miniprogram/pages/personalPage/index.wxml-->
+<cu-custom bgColor="bg-gradual-pink">
+  <view slot="content">我的_EZL_debug</view>
+</cu-custom>
+<view class="intro">我的</view>

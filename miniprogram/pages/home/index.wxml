@@ -1,0 +1,6 @@
+<!--miniprogram/pages/home/index.wxml-->
+<!--miniprogram/pages/community/index.wxml-->
+<cu-custom bgColor="bg-gradual-pink">
+  <view slot="content">首页_EZL_debug</view>
+</cu-custom>
+<view class="intro">首页</view>

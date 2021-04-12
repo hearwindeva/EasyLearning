@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<home wx:if="{{PageCur=='home'}}"></home>
+<community wx:if="{{PageCur=='community'}}"></community>
+<personalPage wx:if="{{PageCur=='personalPage'}}"></personalPage>
+<view class="cu-bar tabbar margin-bottom-xl bg-white shadow foot">
+    <view class="action {{PageCur=='home'?'text-purple':'text-gray'}}"bindtap="NavChange" data-cur="home">
+      <view class="{{PageCur=='home'?'cuIcon-homefill':'cuIcon-home'}}"></view> 首页
+    </view>
+    <view class="action {{PageCur=='community'?'text-purple':'text-gray'}}"bindtap="NavChange" data-cur="community">
+      <view class="{{PageCur=='community'?'cuIcon-communityfill':'cuIcon-community'}}"></view> 社区
+    </view>
+    <view class="action {{PageCur=='personalPage'?'text-purple':'text-gray'}}"bindtap="NavChange" data-cur="personalPage">
+      <view class="{{PageCur=='personalPage'?'cuIcon-myfill':'cuIcon-my'}}"></view>我的
+    </view>
+  </view>

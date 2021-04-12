@@ -1,18 +1,16 @@
 {
-  "description": "项目配置文件",
-  "packOptions": {
-    "ignore": []
-  },
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
     "urlCheck": true,
     "es6": true,
-    "enhance": false,
+    "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
-    "newFeature": false,
+    "newFeature": true,
     "coverView": true,
-    "nodeModules": true,
+    "nodeModules": false,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
@@ -29,33 +27,19 @@
       "disablePlugins": [],
       "outputPath": ""
     },
+    "enableEngineNative": false,
     "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
-    "packNpmManually": true,
-    "packNpmRelationList": [
-      {
-        "packageJsonPath": "./package.json",
-        "miniprogramNpmDistDir": "./miniprogram/"
-      }
-    ],
+    "packNpmManually": false,
+    "packNpmRelationList": [],
     "minifyWXSS": true
   },
-  "compileType": "miniprogram",
-  "libVersion": "2.16.0",
-  "appid": "wxbdf75e3db8dd74a8",
-  "projectname": "miniprogram-2",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "staticServerOptions": {
-    "baseURL": "",
-    "servePath": ""
-  },
-  "isGameTourist": false,
+  "appid": "wx6a65f36c4bb29069",
+  "projectname": "EZL_debug",
+  "libVersion": "2.14.1",
   "condition": {
     "search": {
       "list": []
@@ -63,17 +47,20 @@
     "conversation": {
       "list": []
     },
-    "game": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
-    "gamePlugin": {
+    "game": {
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide"
+        }
+      ]
     }
   }
 }
