@@ -1,5 +1,2 @@
-/* miniprogram/pages/community/index.wxss */
-.intro {
-  margin: 30px;
-  text-align: center;
-}
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";

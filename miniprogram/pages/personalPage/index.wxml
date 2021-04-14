@@ -1,89 +1,92 @@
 <!--miniprogram/pages/personalPage/index.wxml-->
-<cu-custom bgColor="bg-gradual-pink">
-  <view slot="content">我的_EZL_debug</view>
-</cu-custom>
-<view class="padding-xl bg-gradual-purple radius shadow-blur shadow-lg" style="margin: 20rpx">
-  <view class="flex justify-center">
-    <button wx:if="{{!hasUserInfo && canIUse}}" bindtap="getUserProfile" class='cu-btn bg-gradual-green shadow'> 点击授权登录 </button>
-    <block wx:else>
-      <view class="flex-sub">
-        <view class='text-center'>
-          <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
-          <view class="padding">{{userInfo.nickName}}</view>
-        </view>
-      </view>
-      <view class="flex-twice" style="padding: 5rpx">
-        <view class="flex justify-center">
-          <view class="flex-sub align-center" style="padding: 5rpx">
-            <text class="text-white">用户身份:</text>
-          </view>
-          <view class="flex-sub">
-            <button class="cu-btn bg-gradual-green shadow">设定身份</button>
+<view class="bg-gradual-pink" style="height: 100vh">
+  <cu-custom>
+    <view slot="content">我的_EZL_debug</view>
+  </cu-custom>
+  <view class="padding-tb-xl" style="margin: 20rpx">
+    <view class="flex justify-center">
+      <button wx:if="{{!hasUserInfo && canIUse}}" bindtap="getUserProfile" class='cu-btn bg-gradual-green shadow'> 点击授权登录 </button>
+      <block wx:else>
+        <view class="flex-sub">
+          <view class='text-center'>
+            <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
+            <view class="padding">{{userInfo.nickName}}</view>
           </view>
         </view>
-        <view class="flex text-center margin-top">
-          <view class="flex flex-sub flex-direction" style="border-right: 1rpx solid rgba(255, 255, 255, 0.3)">
-            <view class="text-xxl text-red">0</view>
-            <view class="margin-top-sm text-xs">
-              <text class="cuIcon-rechargefill"></text> S币余额</view>
+        <view class="flex-twice" style="padding: 5rpx">
+          <view class="flex justify-center">
+            <view class="flex-sub align-center" style="padding: 5rpx">
+              <text class="text-white">用户身份:</text>
+            </view>
+            <view class="flex-sub">
+              <button class="cu-btn bg-gradual-green shadow">设定身份</button>
+            </view>
           </view>
-          <view class="flex flex-sub flex-direction" style="border-right: 1rpx solid rgba(255, 255, 255, 0.3)">
-            <view class="text-xxl text-yellow">0</view>
-            <view class="margin-top-sm text-xs">
-              <text class="cuIcon-hotfill"></text> 签约数</view>
-          </view>
-          <view class="flex flex-sub flex-direction">
-            <view class="text-xxl text-blue">0</view>
-            <view class="margin-top-sm text-xs">
-              <text class="cuIcon-appreciatefill"></text> 好评数</view>
+          <view class="flex text-center margin-top">
+            <view class="flex flex-sub flex-direction" style="border-right: 1rpx solid rgba(255, 255, 255, 0.3)">
+              <view class="text-xxl text-red">0</view>
+              <view class="margin-top-sm text-xs">
+                <text class="cuIcon-rechargefill"></text> S币余额</view>
+            </view>
+            <view class="flex flex-sub flex-direction" style="border-right: 1rpx solid rgba(255, 255, 255, 0.3)">
+              <view class="text-xxl text-yellow">0</view>
+              <view class="margin-top-sm text-xs">
+                <text class="cuIcon-hotfill"></text> 签约数</view>
+            </view>
+            <view class="flex flex-sub flex-direction">
+              <view class="text-xxl text-blue">0</view>
+              <view class="margin-top-sm text-xs">
+                <text class="cuIcon-appreciatefill"></text> 好评数</view>
+            </view>
           </view>
         </view>
-      </view>
-    </block>
+      </block>
+    </view>
+  </view>
+
+  <view class="cu-list menu card-menu shadow-blur radius" style="margin: 20rpx">
+    <view class="cu-item arrow">
+      <button class="cu-btn content" bindtap="toRecharge">
+        <text class="cuIcon-sponsorfill text-red"></text>
+        <text class="text-grey">S币充值</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" bindtap="toMyVoucher">
+        <text class="cuIcon-goodsfill text-orange"></text>
+        <text class="text-grey">我的代金券</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" bindtap="toMyEvaluation">
+        <text class="cuIcon-messagefill text-yellow"></text>
+        <text class="text-grey">我的评价</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" bindtap="toContactManager">
+        <text class="cuIcon-squarecheckfill text-green"></text>
+        <text class="text-grey">签约管理</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" bindtap="toContactCS">
+        <text class="cuIcon-servicefill text-cyan"></text>
+        <text class="text-grey">联系客服</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" bindtap="toAboutUs">
+        <text class="cuIcon-newshotfill text-blue"></text>
+        <text class="text-grey">关于我们</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" bindtap="toContactUs">
+        <text class="cuIcon-writefill text-purple"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
   </view>
 </view>
 
-<view class="cu-list menu card-menu shadow-blur radius" style="margin: 20rpx">
-  <view class="cu-item arrow">
-    <button class="cu-btn content" open-type="feedback">
-      <text class="cuIcon-sponsorfill text-red"></text>
-      <text class="text-grey">S币充值</text>
-    </button>
-  </view>
-  <view class="cu-item arrow">
-    <button class="cu-btn content" open-type="feedback">
-      <text class="cuIcon-goodsfill text-orange"></text>
-      <text class="text-grey">我的代金券</text>
-    </button>
-  </view>
-  <view class="cu-item arrow">
-    <button class="cu-btn content" open-type="feedback">
-      <text class="cuIcon-messagefill text-yellow"></text>
-      <text class="text-grey">我的评价</text>
-    </button>
-  </view>
-  <view class="cu-item arrow">
-    <button class="cu-btn content" open-type="feedback">
-      <text class="cuIcon-squarecheckfill text-green"></text>
-      <text class="text-grey">签约管理</text>
-    </button>
-  </view>
-  <view class="cu-item arrow">
-    <button class="cu-btn content" open-type="feedback">
-      <text class="cuIcon-servicefill text-cyan"></text>
-      <text class="text-grey">联系客服</text>
-    </button>
-  </view>
-  <view class="cu-item arrow">
-    <button class="cu-btn content" open-type="feedback">
-      <text class="cuIcon-newshotfill text-blue"></text>
-      <text class="text-grey">关于我们</text>
-    </button>
-  </view>
-  <view class="cu-item arrow">
-    <button class="cu-btn content" open-type="feedback">
-      <text class="cuIcon-writefill text-purple"></text>
-      <text class="text-grey">意见反馈</text>
-    </button>
-  </view>
-</view>

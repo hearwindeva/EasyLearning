@@ -5,7 +5,14 @@
     "pages/home/recommendList/p_school",
     "pages/home/recommendList/m_school",
     "pages/community/index",
-    "pages/personalPage/index"
+    "pages/personalPage/index",
+    "pages/personalPage/aboutUs/index",
+    "pages/personalPage/contactUs/index",
+    "pages/personalPage/myEvaluation/index",
+    "pages/personalPage/myVoucher/index",
+    "pages/personalPage/recharge/index",
+    "pages/personalPage/contactManager/index",
+    "pages/personalPage/contactCS/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

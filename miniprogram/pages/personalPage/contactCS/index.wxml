@@ -1,0 +1,5 @@
+<!--miniprogram/pages/personalPage/contactCS/index.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="true">
+  <view slot="backText">返回</view>
+  <view slot="content">联系客服</view>
+</cu-custom>

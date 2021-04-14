@@ -1,0 +1,23 @@
+<!--miniprogram/pages/personalPage/aboutUs/index.wxml-->
+<view class="bg-gradual-pink" style="height: 100vh">
+  <cu-custom isBack="true">
+    <view slot="backText">返回</view>
+    <view slot="content">关于我们</view>
+  </cu-custom>
+
+  <view class="flex flex-wrap justify-center">
+    <view class="margin-sm padding radius bg-white shadow-blur justify-center" style="flex-basis: 90%; height: 85vh">
+      <image class="padding png" mode="aspectFit" src="../../../images/logo.png" style="border-bottom: 1rpx solid rgba(0, 0, 0, 0.3)"></image>
+      <view class="padding-sm"></view>
+      <text class="">
+        EZL_Debug是一款为校内大学生寻找家教兼职与广大家长寻找家庭教师提供中介信息平台的微信小程序，旨在为寻找兼职的大学生与寻找家教的家长提供最为优质方便的中介服务。\n
+
+        团队位于湖南理工学院校内，可提供最为真实的家教市场供求信息与优质兼职家教资源。用户亦可提供使用反馈与改进建议，这将为团队更新平台提供宝贵的方向信息。
+      </text>
+      <view class="padding"></view>
+      <view class="text-center padding-top" style="border-top: 1rpx solid rgba(0, 0, 0, 0.3)">
+        <text class="text-gray">Copyright © 2021 EZL team,All Right Resereved.</text>
+      </view>
+    </view>
+  </view>
+</view>
