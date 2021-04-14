@@ -3,4 +3,31 @@
 <cu-custom bgColor="bg-gradual-pink">
   <view slot="content">首页_EZL_debug</view>
 </cu-custom>
-<view class="intro">首页</view>
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key="index">
+    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+  </swiper-item>
+</swiper>
+<view class="margin-sm radius bg-white shadow">
+  <view class="flex">
+    <button class="flex-sub cu-btn bg-gradual-orange margin-sm" bindtap="printInfo">我要成为学员</button>
+    <button class="flex-sub cu-btn bg-gradual-blue margin-sm">我要成为教员</button>
+  </view>
+</view>
+
+<view class="cu-bar bg-white margin-top solid-bottom">
+  <view class="action">
+    <text class="cuIcon-titles text-orange"></text> 推荐教师
+  </view>
+</view>
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{2}}" wx:key="index" bindtap="tabSelect" data-id="{{index}}">
+      {{navName[index]}}
+    </view>
+  </view>
+</scroll-view>
+<psList wx:if="{{TabCur == 0}}"></psList>
+<msList wx:else></msList>
+

@@ -1,0 +1,179 @@
+<!--pages/home/recommendList/m_school.wxml-->
+<view class="cu-list menu-avatar">
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力。</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item ">
+    <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2018/05/18/6880h4884p1.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+    <view class="content">
+      <view class="text-red">
+        <text class="text-cut">博丽灵梦</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">拥有极度幸运但没有香火钱的能力</text>
+      </view>
+    </view>
+  </view>
+</view>

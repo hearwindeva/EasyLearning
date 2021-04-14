@@ -1,9 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/personalPage/index",
+    "pages/home/index",
+    "pages/home/recommendList/p_school",
+    "pages/home/recommendList/m_school",
     "pages/community/index",
-    "pages/home/index"
+    "pages/personalPage/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

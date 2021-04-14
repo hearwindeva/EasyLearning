@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "psList": "/pages/home/recommendList/p_school",
+    "msList": "/pages/home/recommendList/m_school"
+  }
 }
