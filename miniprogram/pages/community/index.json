@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {    
+    "localPage": "/pages/community/localPage/index",
+    "pushPage": "/pages/community/pushPage/index",
+    "timePage": "/pages/community/timePage/index"
+  },
   "component": true
 }
