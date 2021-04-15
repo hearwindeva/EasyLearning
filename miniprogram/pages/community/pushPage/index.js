@@ -1,15 +1,10 @@
-// pages/demo1/index.js
+// pages/community/PushPage/index.js
 Page({
-  options: {
-    addGlobalClass: true,
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    TabCur: 'localPage',
-    TabId:0,
-    scrollLeft:0,
     cardCount :4,
     cardData: [{
       Icon:'',
@@ -265,30 +260,19 @@ Page({
       type: 'image',
       url: 'https://img2.huashi6.com/images/resource/2015/04/25/5000h7268p0.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp'
     }]
-  },
-    gridCol: 3,
-    skin: false,
-    ToSearch: function () {
-      wx.navigateTo({
-        url: '/pages/community/searchIndexPage/index',
-      })
-    },
-  isCard(e) {
-    this.setData({
-      isCard: e.detail.value
+  },   
+  gridCol: 3,
+  skin: false,
+isCard(e) {
+  this.setData({
+    isCard: e.detail.value
+  })
+},
+  ToDetailPage: function (event) {
+    //打开我要请家教
+    wx.navigateTo({
+      url: '/pages/community/detail/index',
     })
-  },
-/**
- * 导航栏被选择
- */
-  tabSelect(e) {
-    this.setData({
-      TabCur: e.currentTarget.dataset.cur,
-      TabId:e.currentTarget.dataset.id,
-      scrollLeft: (e.currentTarget.dataset.id-1)*60,
-    });
-      console.log("导航栏被点击");
-      console.log(this.data.TabCur);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -329,19 +313,26 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    var addCardCount = 4;
+    var newCardCount = this.data.cardCount+addCardCount;
+    this.setData({
+      cardCount: newCardCount
+    });
+    console.log('页面划到底端XXXXX');
+    console.log(this.data.cardCount);
   },
-
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  },
-  
+
+  }
 })
