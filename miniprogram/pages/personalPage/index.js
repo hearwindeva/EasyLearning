@@ -4,6 +4,21 @@ const app = getApp()
  
 Component({ 
   data: {
+    show: false,
+    buttons: [
+      {
+          type: 'primary',
+          className: '',
+          text: '教员',
+          value: 1
+      },
+      {
+          type: 'default',
+          className: '',
+          text: '学员',
+          value: 0
+      }
+    ],
     StatusBar: app.globalData.StatusBar, 
     CustomBar: app.globalData.CustomBar, 
     userInfo: {}, 
@@ -42,6 +57,25 @@ Component({
   },
 
   methods: {
+    open: function () {
+      this.setData({
+          show: true
+      })
+    },
+
+    buttontap(e) {
+      if (e.detail.index == 0) {
+        wx.navigateTo({
+          url: '../home/chooseIdentity/teacher'
+        })
+      } else {
+        wx.navigateTo({
+          url: '../home/chooseIdentity/student'
+        })
+      }
+        console.log(e.detail)
+    },
+
     toContactUs: function() {
       wx.navigateTo({
         url: '/pages/personalPage/contactUs/index',

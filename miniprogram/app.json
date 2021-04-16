@@ -16,7 +16,9 @@
     "pages/personalPage/myVoucher/index",
     "pages/personalPage/recharge/index",
     "pages/personalPage/contactManager/index",
-    "pages/personalPage/contactCS/index"
+    "pages/personalPage/contactCS/index",
+    "pages/home/chooseIdentity/teacher",
+    "pages/home/chooseIdentity/student"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,6 +26,10 @@
     "navigationBarTitleText": "ColorUI",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"
+  },
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"

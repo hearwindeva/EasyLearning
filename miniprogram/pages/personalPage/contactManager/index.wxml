@@ -3,3 +3,32 @@
   <view slot="backText">返回</view>
   <view slot="content">签约管理</view>
 </cu-custom>
+
+<view class="cu-bar bg-white shadow" style="border-bottom: 1rpx solid rgba(0, 0, 0, 0.3)">
+  <view class="action">
+    <text class="cuIcon-title text-pink"></text> 已签约
+  </view>
+</view>
+<scroll-view scroll-y="{{modalName==null}}" class="page {{modalName!=null?'show':''}}">
+  <view wx:if="{{!hasContact}}" class="intro text-gray">
+    暂无签约
+  </view>
+
+  <view wx:else class="cu-list menu-avatar">
+    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{4}}" wx:key="index" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+      <view class="cu-avatar radius lg" style="background-image:url(https://img2.huashi6.com/images/resource/2021/01/14/87043h365p2.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp);"></view>
+      <view class="content">
+        <view class="text-pink">
+          <text class="text-cut">魂魄妖梦</text>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">签约至：2021-4-16</text>
+        </view>
+      </view>
+      <view class="move">
+        <view class="bg-grey">置顶</view>
+        <view class="bg-red">删除</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

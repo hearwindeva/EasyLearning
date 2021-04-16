@@ -13,14 +13,14 @@
 
 <view class="margin-sm radius bg-white shadow">
   <view class="flex">
-    <button class="flex-sub cu-btn bg-gradual-orange margin-sm" bindtap="printInfo">我要成为学员</button>
-    <button class="flex-sub cu-btn bg-gradual-blue margin-sm">我要成为教员</button>
+    <button class="flex-sub cu-btn bg-gradual-orange margin-sm" bindtap="toTeacher">我要成为教员</button>
+    <button class="flex-sub cu-btn bg-gradual-blue margin-sm" bindtap="toStudent">我要成为学员</button>
   </view>
 </view>
 
 <view class="cu-bar bg-white margin-top solid-bottom">
   <view class="action">
-    <text class="cuIcon-titles text-orange"></text> 推荐教师
+    <text class="cuIcon-titles text-orange"></text> 推荐教员
   </view>
 </view>
 <scroll-view scroll-x class="bg-white nav">

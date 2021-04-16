@@ -49,6 +49,16 @@ Component({
   },
 
   methods: {
+    toTeacher() {
+      wx.navigateTo({
+        url: '../home/chooseIdentity/teacher'
+      })
+    },
+    toStudent() {
+      wx.navigateTo({
+        url: '../home/chooseIdentity/student'
+      })
+    },
     tabSelect(e) {
       this.setData({
         TabCur: e.currentTarget.dataset.id,
@@ -56,7 +66,12 @@ Component({
       })
     },  
     printInfo: function() {
-      console.log(app.globalData.userInfo)
+      wx.request({
+        url: 'http://39.107.238.42:8080/findAllUser',
+        success: function(res) {
+          console.log(res.data)
+        }
+      })
     },
   }
 })

@@ -19,7 +19,7 @@
               <text class="text-white">用户身份:</text>
             </view>
             <view class="flex-sub">
-              <button class="cu-btn bg-gradual-green shadow">设定身份</button>
+              <button class="cu-btn bg-gradual-green shadow" bindtap="open">设定身份</button>
             </view>
           </view>
           <view class="flex text-center margin-top">
@@ -88,5 +88,14 @@
       </button>
     </view>
   </view>
+
+  <mp-half-screen-dialog 
+        bindbuttontap="buttontap"
+        show="{{show}}"
+        maskClosable="{{false}}" 
+        title="选择用户身份" 
+        desc="请选择您想要成为的用户身份"
+        tips="二者均需要补全信息"
+        buttons="{{buttons}}"></mp-half-screen-dialog>
 </view>
 

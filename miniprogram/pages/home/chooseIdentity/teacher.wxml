@@ -1,0 +1,5 @@
+<!--miniprogram/pages/home/chooseIdentity/teacher.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="true">
+  <view slot="backText">返回</view>
+  <view slot="content">教员信息补全</view>
+</cu-custom>

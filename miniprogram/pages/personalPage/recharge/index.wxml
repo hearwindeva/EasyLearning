@@ -3,3 +3,28 @@
   <view slot="backText">返回</view>
   <view slot="content">S币充值</view>
 </cu-custom>
+
+<view class="cu-bar bg-white shadow">
+  <view class="action">
+    <text class="cuIcon-title text-pink"></text> 请选择需要充值的金额
+  </view>
+</view>
+
+<view>
+  <view class="grid col-3 padding-sm">
+    <view wx:for="{{checkbox}}" class="padding-xs" wx:key="index">
+      <button class="cu-btn pink lg block {{item.checked?'bg-pink':'line-pink'}}" bindtap="ChooseCheckbox" data-value="{{item.value}}">
+        <view>
+          <view>
+            <text class="{{item.checked?'text-white':'text-pink'}}">{{item.name}}</text>
+          </view>
+          <text class="{{item.checked?'text-white':'text-pink'}} text-xs">{{item.tip}}</text>
+        </view>
+      </button>
+    </view>
+  </view>
+</view>
+
+<view class="padding">
+  <button class="cu-btn block lg bg-gradual-red shadow" bindtap="confirmRecharge">确定充值</button>
+</view>
