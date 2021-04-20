@@ -49,6 +49,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    nmsl: true
+    ezlUserInfo: null,
   }
 })

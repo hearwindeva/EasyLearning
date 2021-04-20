@@ -1,4 +1,4 @@
-// miniprogram/pages/personalPage/contactUs/index.js
+// miniprogram/pages/personalPage/userMsg/index.js
 const app = getApp()
 
 Page({
@@ -7,24 +7,47 @@ Page({
    * 页面的初始数据
    */
   data: {
-    subObject: {}
+    show: false,
+    buttons: [
+      {
+          type: 'primary',
+          className: '',
+          text: '教员',
+          value: 1
+      },
+      {
+          type: 'default',
+          className: '',
+          text: '学员',
+          value: 0
+      }
+    ],
+    userInfo: null,
+    ezlUserInfo: null,
   },
 
-  submit: function(e) {
+  open: function () {
     this.setData({
-      subObject: {
-        user_id: app.globalData.ezlUserInfo.user_id,
-        content: e.detail.value.content
-      }
+        show: true
     })
-    wx.request({
-      url: 'https://a.mcbbs.city:80/insertFeedback',
-      method: "POST",
-      dataType: "json",
-      data: this.data.subObject,
-      success: function(res) {
-        console.log(res.data)
-      }
+  },
+
+  buttontap(e) {
+    if (e.detail.index == 0) {
+      wx.navigateTo({
+        url: '../../home/chooseIdentity/teacher'
+      })
+    } else {
+      wx.navigateTo({
+        url: '../../home/chooseIdentity/student'
+      })
+    }
+      console.log(e.detail)
+  },
+
+  toCompleteInfo: function() {
+    wx.navigateTo({
+      url: '../completeInfo/index',
     })
   },
 
@@ -32,7 +55,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({userInfo: app.globalData.userInfo});
+    this.setData({ezlUserInfo: app.globalData.ezlUserInfo});
   },
 
   /**

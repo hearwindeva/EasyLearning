@@ -1,0 +1,96 @@
+<!--miniprogram/pages/personalPage/userMsg/index.wxml-->
+<view class="bg-gradual-pink" style="height: 100vh">
+  <cu-custom isBack="true">
+    <view slot="backText">返回</view>
+    <view slot="content">用户信息</view>
+  </cu-custom>
+
+  <view class="flex flex-wrap justify-center">
+    <view class="margin-sm radius shadow-blur justify-center" style="flex-basis: 90%; height: 85vh">
+      <view class="flex-sub padding-xl">
+        <view class='text-center'>
+          <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})" bindtap="toUserMsg"></view>
+          <view class="padding">{{userInfo.nickName}}</view>
+        </view>
+      </view>
+
+      <view class="cu-list bg-white menu radius">
+        <view class="cu-item">
+          <view class="content">
+            <text>用户昵称</text>
+          </view>
+          <view class="action">
+            <text class="text-grey">{{userInfo.nickName}}</text>
+          </view>
+        </view>
+
+        <view class="cu-item arrow">
+          <view class="content">
+            <text>用户身份</text>
+          </view>
+          <view class="action" bindtap="open">
+            <text class="text-grey">暂未选择用户身份</text>
+          </view>
+        </view>
+
+        <view class="cu-item">
+          <view class="content">
+            <text>真实姓名</text>
+          </view>
+          <view class="action">
+            <text class="text-grey">{{ezlUserInfo.user_real_name == null ? "暂未补全信息" : ezlUserInfo.user_real_name}}</text>
+          </view>
+        </view>
+
+        <view class="cu-item">
+          <view class="content">
+            <text>性别</text>
+          </view>
+          <view class="action">
+            <text class="text-grey">{{ezlUserInfo.user_sex == null ? "暂未补全信息" : ezlUserInfo.user_sex}}</text>
+          </view>
+        </view>
+
+        <view class="cu-item">
+          <view class="content">
+            <text>联系电话</text>
+          </view>
+          <view class="action">
+            <text class="text-grey">{{ezlUserInfo.user_tel == null ? "暂未补全信息" : ezlUserInfo.user_tel}}</text>
+          </view>
+        </view>
+
+        <view class="cu-item">
+          <view class="content">
+            <text>邮箱</text>
+          </view>
+          <view class="action">
+            <text class="text-grey">{{ezlUserInfo.user_email == null ? "暂未补全信息" : ezlUserInfo.user_email}}</text>
+          </view>
+        </view>
+
+        <view class="cu-item">
+          <view class="content">
+            <text>QQ号</text>
+          </view>
+          <view class="action">
+            <text class="text-grey">{{ezlUserInfo.user_QQ == null ? "暂未补全信息" : ezlUserInfo.user_QQ}}</text>
+          </view>
+        </view>
+        <view class="padding">
+          <button class="cu-btn block lg bg-gradual-red shadow" bindtap="toCompleteInfo">补全/修改信息</button>
+        </view>
+      </view>
+    </view>
+
+    <mp-half-screen-dialog 
+        bindbuttontap="buttontap"
+        show="{{show}}"
+        maskClosable="{{false}}" 
+        title="选择用户身份" 
+        desc="请选择您想要成为的用户身份"
+        tips="二者均需要补全信息"
+        buttons="{{buttons}}"></mp-half-screen-dialog>
+  </view>
+</view>
+

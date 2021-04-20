@@ -1,0 +1,8 @@
+/* miniprogram/pages/home/chooseIdentity/student.wxss */
+.block {
+  height: 100%;
+  width: 92%;
+  border-radius: 25rpx;
+  padding: 20rpx;
+  margin: auto;
+}

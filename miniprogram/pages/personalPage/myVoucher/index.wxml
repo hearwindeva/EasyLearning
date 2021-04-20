@@ -3,3 +3,28 @@
   <view slot="backText">返回</view>
   <view slot="content">我的代金券</view>
 </cu-custom>
+
+<view class="cu-card case">
+  <view class="cu-item shadow">
+    <view class="flex">
+      <view class="flex-sub bg-red">
+        <view class="flex-direction padding text-center">
+          <view class="text-xxl text-white">8折</view>
+          <view class="margin-top-sm text-xs">
+            无门槛充值
+          </view>
+        </view>
+      </view>
+      <view class="flex-treble bg-white">
+        <view class="padding flex flex-direction" style="height: 100%">
+          <view class="flex-twice" style="border-bottom: 1rpx solid rgba(0, 0, 0, 0.3)">
+            全场无门槛8折充值券
+          </view>
+          <view class="flex-sub text-sm text-gray">
+            过期时间：2021-4-15
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

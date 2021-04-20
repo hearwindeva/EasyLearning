@@ -5,7 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
+    hasOrder: true,
+    chooseIndex: -1,
+    checkbox: [{
+      value: 0,
+      name: '好评',
+      checked: false,
+      hot: false,
+    }, {
+      value: 1,
+      name: '中评',
+      checked: false,
+      hot: false,
+    }, {
+      value: 2,
+      name: '差评',
+      checked: false,
+      hot: true,
+    }]
+  },
 
+  ChooseCheckbox(e) {
+    let items = this.data.checkbox;
+    let values = e.currentTarget.dataset.value;
+    let tempIndex = this.chooseIndex;
+    for (let i = 0, lenI = items.length; i < lenI; i++) {
+      if (items[i].value == values) {
+        items[i].checked = !items[i].checked;
+
+        if (items[i].checked)
+          tempIndex = items[i].value;
+        else
+          tempIndex = -1;
+      } else
+        items[i].checked = false;
+    }
+    this.setData({
+      checkbox: items,
+      chooseIndex: tempIndex
+    })
   },
 
   /**

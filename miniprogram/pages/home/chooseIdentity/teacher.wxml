@@ -1,0 +1,68 @@
+<!--miniprogram/pages/home/chooseIdentity/teacher.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="true">
+  <view slot="backText">返回</view>
+  <view slot="content">教员信息补全</view>
+</cu-custom>
+
+<view class="page">
+    <view>
+        <view class="block">
+            <text style="font-size: 70rpx">教员信息\n</text>
+            <text>填写您想要担任的家教信息</text>
+        </view>
+        <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+            <mp-cells title="教学课程类型选择">
+                <mp-checkbox-group prop="classRadio" multi="{{false}}" bindchange="classRadioChange">
+                    <mp-checkbox wx:for="{{classRadio}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                </mp-checkbox-group>
+            </mp-cells>
+            <mp-cells title="阶段选择" wx:if="{{courseIsCultrue}}">
+                <mp-checkbox-group prop="gradeRadio" multi="{{false}}" bindchange="gradeRadioChange">
+                    <mp-checkbox wx:for="{{gradeRadio}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                </mp-checkbox-group>
+            </mp-cells>
+            <mp-cells title="授课科目" wx:if="{{courseIsCultrue}}">
+                <mp-checkbox-group prop="courseCheckBox" multi="{{true}}" bindchange="courseCheckBoxChange">
+                    <mp-checkbox wx:for="{{courseCheckBox}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                </mp-checkbox-group>
+            </mp-cells>
+            <mp-cells title="授课方式">
+                <mp-checkbox-group prop="teachWaysCheckBox" multi="{{true}}" bindchange="teachWaysCheckBoxChange">
+                    <mp-checkbox wx:for="{{teachWaysCheckBox}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                </mp-checkbox-group>
+            </mp-cells>
+            <mp-cells>
+                <mp-cell prop="date" title="日期" ext-class="">
+                    <picker data-field="date" mode="date" value="{{date}}" start="2021-01-01" end="2030-01-01" bindchange="bindDateChange">
+                        <view class="weui-input">{{date}}</view>
+                    </picker>
+                </mp-cell>
+            </mp-cells>
+            <mp-cells title="联系信息">
+                <mp-cell prop="qq" title="QQ号" ext-class="">
+                    <input bindinput="formInputChange" data-field="qq" class="weui-input" placeholder="请输入QQ号"/>
+                </mp-cell>
+            </mp-cells>
+
+
+        <checkbox-group bindchange="bindAgreeChange">
+            <label class="weui-agree" for="weuiAgree">
+                <view class="weui-agree__text">
+                    <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+                    <view class="weui-agree__checkbox-icon">
+                        <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+                    </view>
+                    阅读并同意<navigator url="" class="weui-agree__link">《相关条款》</navigator>
+                </view>
+            </label>
+        </checkbox-group>
+        </mp-form>
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+        </view>
+        <mp-dialog title="此服务尚未完成" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+            <view>由于服务器尚未搭建完成，无法完成操作，目前该项目尚在开发中，敬请期待。</view>
+        </mp-dialog>
+    </view>
+</view>

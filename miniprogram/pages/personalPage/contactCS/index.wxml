@@ -1,5 +1,23 @@
-<!--miniprogram/pages/personalPage/contactCS/index.wxml-->
-<cu-custom bgColor="bg-gradual-pink" isBack="true">
-  <view slot="backText">返回</view>
-  <view slot="content">联系客服</view>
-</cu-custom>
+<!--miniprogram/pages/personalPage/aboutUs/index.wxml-->
+<view class="bg-gradual-pink" style="height: 100vh">
+  <cu-custom isBack="true">
+    <view slot="backText">返回</view>
+    <view slot="content">联系客服</view>
+  </cu-custom>
+
+  <view class="flex flex-wrap justify-center">
+    <view class="margin-sm padding radius bg-white shadow-blur justify-center" style="flex-basis: 90%; height: 85vh">
+      <image class="padding png" mode="aspectFit" src="../../../images/logo.png" style="border-bottom: 1rpx solid rgba(0, 0, 0, 0.3)"></image>
+      <view class="padding-sm"></view>
+      <text class="">
+        暂时还没有客服哦，这边建议虔诚阅读一下二刺螈圣经呢：
+
+        诶多……☆是♡同♡类♡呢♡喵♪（由乃逆光捧脸.jpg）那群八嘎是不会懂的呀……关于「二次元の美好」♡呐，如果说吾の存在有意义的话、那一定是因为「二·次·元」吧☆？所以呢——妄图污染这份「爱」的人类、都会被吾「抹」「杀」「掉」喔♪（小声）嘛……讨厌二次元的八嘎三次元最恶心了啊魂淡！★
+      </text>
+      <view class="padding"></view>
+      <view class="text-center padding-top" style="border-top: 1rpx solid rgba(0, 0, 0, 0.3)">
+        <text class="text-gray">Copyright © 2021 EZL team,All Right Resereved.</text>
+      </view>
+    </view>
+  </view>
+</view>
