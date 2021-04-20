@@ -1,0 +1,61 @@
+<!--miniprogram/pages/personalPage/completeInfo/index.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="true">
+  <view slot="backText">返回</view>
+  <view slot="content">补全信息</view>
+</cu-custom>
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="cuIcon-titles text-orange"></text> 个人基本信息
+  </view>
+</view>
+
+<form bindsubmit="toCompleteInfo">
+  <view class="cu-form-group margin-top">
+		<view class="title">真实姓名</view>
+		<input name="user_real_name" placeholder="请输入您的真实姓名" value="{{changeUserInfo.user_real_name}}"></input>
+	</view>
+	
+  <view class="cu-form-group margin-top">
+		<view class="title">性别</view>
+		<switch name="user_sex" class="switch-sex" checked="{{changeUserInfo.user_sex == '女'}}"></switch>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">身份证号</view>
+		<input name="user_id_card" placeholder="请输入身份证号" maxlength="18" value="{{changeUserInfo.user_id_card}}"></input>
+	</view>
+	
+  <view class="cu-form-group margin-top">
+		<view class="title">手机号码</view>
+		<input name="user_tel" placeholder="请输入手机号" maxlength="11" value="{{changeUserInfo.user_tel}}"></input>
+		<view class="cu-capsule radius">
+			<view class="cu-tag bg-blue">
+				+86
+			</view>
+			<view class="cu-tag line-blue">
+				中国大陆
+			</view>
+		</view>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">验证码</view>
+		<input placeholder="请输入验证码" value="{{testcode}}"></input>
+		<button class="cu-btn bg-green shadow" bindtap="test">获取验证码</button>
+	</view>
+
+	<view class="cu-form-group margin-top">
+		<view class="title">邮箱</view>
+		<input name="user_email" placeholder="请输入联系用邮箱" value="{{changeUserInfo.user_email}}"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">QQ号</view>
+		<input name="user_QQ" placeholder="请输入联系用QQ号" value="{{changeUserInfo.user_QQ}}"></input>
+  </view>
+  
+  <view class="padding">
+    <button form-type="submit" class="cu-btn block lg bg-gradual-red shadow">确定提交信息</button>
+  </view>
+</form>

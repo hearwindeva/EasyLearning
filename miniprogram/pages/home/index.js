@@ -54,23 +54,17 @@ Component({
         url: '../home/chooseIdentity/teacher'
       })
     },
+
     toStudent() {
       wx.navigateTo({
         url: '../home/chooseIdentity/student'
       })
     },
+
     tabSelect(e) {
       this.setData({
         TabCur: e.currentTarget.dataset.id,
         scrollLeft: (e.currentTarget.dataset.id-1)*60
-      })
-    },  
-    printInfo: function() {
-      wx.request({
-        url: 'http://39.107.238.42:8080/findAllUser',
-        success: function(res) {
-          console.log(res.data)
-        }
       })
     },
   }

@@ -4,14 +4,14 @@
   <view slot="content">意见反馈</view>
 </cu-custom>
 
-<form>
+<form bindsubmit="submit">
   <view class="cu-form-group align-start">
     <view class="title">意见或建议</view>
-    <textarea maxlength="-1" bindinput="" auto-height="true" placeholder="请输入您的意见或建议">
+    <textarea name="content" maxlength="-1" bindinput="" auto-height="true" placeholder="请输入您的意见或建议">
 
     </textarea>
   </view>
   <view class="padding-xl">
-    <button class="cu-btn block bg-gradual-red shadow">提交意见反馈 </button>
+    <button form-type="submit" class="cu-btn block bg-gradual-red shadow">提交意见反馈 </button>
   </view>
 </form>

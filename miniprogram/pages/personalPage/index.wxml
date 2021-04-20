@@ -9,7 +9,7 @@
       <block wx:else>
         <view class="flex-sub">
           <view class='text-center'>
-            <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
+            <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})" bindtap="toUserMsg"></view>
             <view class="padding">{{userInfo.nickName}}</view>
           </view>
         </view>
@@ -23,17 +23,17 @@
             </view>
           </view>
           <view class="flex text-center margin-top">
-            <view class="flex flex-sub flex-direction" style="border-right: 1rpx solid rgba(255, 255, 255, 0.3)">
-              <view class="text-xxl text-red">0</view>
+            <view class="flex flex-sub flex-direction" style="border-right: 1rpx solid rgba(255, 255, 255, 0.3)" bindtap="toRecharge">
+              <view class="text-xxl text-red">{{ezlUserInfo.sb}}</view>
               <view class="margin-top-sm text-xs">
                 <text class="cuIcon-rechargefill"></text> S币余额</view>
             </view>
-            <view class="flex flex-sub flex-direction" style="border-right: 1rpx solid rgba(255, 255, 255, 0.3)">
+            <view class="flex flex-sub flex-direction" style="border-right: 1rpx solid rgba(255, 255, 255, 0.3)" bindtap="toContactManager">
               <view class="text-xxl text-yellow">0</view>
               <view class="margin-top-sm text-xs">
                 <text class="cuIcon-hotfill"></text> 签约数</view>
             </view>
-            <view class="flex flex-sub flex-direction">
+            <view class="flex flex-sub flex-direction" bindtap="toMyEvaluation">
               <view class="text-xxl text-blue">0</view>
               <view class="margin-top-sm text-xs">
                 <text class="cuIcon-appreciatefill"></text> 好评数</view>

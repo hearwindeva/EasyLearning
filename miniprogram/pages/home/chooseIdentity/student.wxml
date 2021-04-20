@@ -3,3 +3,137 @@
   <view slot="backText">返回</view>
   <view slot="content">学员信息补全</view>
 </cu-custom>
+
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="block">
+        <text style="font-size: 70rpx">需求列表\n</text>
+        <text>填写您对家教的需求</text>
+    </view>
+    <view>
+        <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+            <mp-cells title="课程类型选择">
+                <mp-checkbox-group prop="classRadio" multi="{{false}}" bindchange="classRadioChange">
+                    <mp-checkbox wx:for="{{classRadio}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                </mp-checkbox-group>
+            </mp-cells>
+            <mp-cells title="学历选择" wx:if="{{courseIsCultrue}}">
+                <mp-checkbox-group prop="gradeRadio" multi="{{false}}" bindchange="gradeRadioChange">
+                    <mp-checkbox wx:for="{{gradeRadio}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                </mp-checkbox-group>
+            </mp-cells>
+            <mp-cells title="授课科目" wx:if="{{courseIsCultrue}}">
+                <mp-checkbox-group prop="courseCheckBox" multi="{{true}}" bindchange="courseCheckBoxChange">
+                    <mp-checkbox wx:for="{{courseCheckBox}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                </mp-checkbox-group>
+            </mp-cells>
+            <mp-cells title="授课方式">
+                <mp-checkbox-group prop="teachWaysCheckBox" multi="{{true}}" bindchange="teachWaysCheckBoxChange">
+                    <mp-checkbox wx:for="{{teachWaysCheckBox}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+                </mp-checkbox-group>
+            </mp-cells>
+            <mp-cells>
+                <mp-cell prop="date" title="日期" ext-class="">
+                    <picker data-field="date" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                        <view class="weui-input">{{date}}</view>
+                    </picker>
+                </mp-cell>
+            </mp-cells>
+                
+        </mp-form>
+
+        <view class="weui-cells__title">是否接受授课时间变化</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_switch">
+                <view class="weui-cell__bd">接受变动</view>
+                <view class="weui-cell__ft">
+                    <switch checked />
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">输入课时长度</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入课时长度" />
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">输入课时数</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入课时数" />
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">输入预期价格</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入价格" />
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">详细说明</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="输入详细说明" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+        <view class="Uploader">
+            <mp-cells>
+                <mp-cell>
+                    <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}" files="{{files}}" max-count="5" title="图片展示"></mp-uploader>
+                </mp-cell>
+            </mp-cells>
+        </view>
+
+        <view class="weui-cells__title">手机号</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd" style="width: 105px">
+                    <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
+                        <view class="weui-select">{{countryCodes[countryCodeIndex]}}</view>
+                    </picker>
+                </view>
+                <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                    <input class="weui-input" placeholder="请输入号码" bindchange="bindPhoneNumberChange" />
+                </view>
+            </view>
+        </view>
+        <mp-cells>
+            <mp-cell title="教师性别">
+                <picker bindchange="bindSexChange" value="{{sexIndex}}" range="{{sex}}">
+                    <view class="weui-select weui-select_in-select-after">{{sex[sexIndex]}}</view>
+                </picker>
+            </mp-cell>
+        </mp-cells>
+
+        <checkbox-group bindchange="bindAgreeChange">
+            <label class="weui-agree" for="weuiAgree">
+                <view class="weui-agree__text">
+                    <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+                    <view class="weui-agree__checkbox-icon">
+                        <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+                    </view>
+                    阅读并同意<navigator url="" class="weui-agree__link">《相关条款》</navigator>
+                </view>
+            </label>
+        </checkbox-group>
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+        </view>
+        <mp-dialog title="此服务尚未完成" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+            <view>由于服务器尚未搭建完成，无法完成操作，目前该项目尚在开发中，敬请期待。</view>
+        </mp-dialog>
+    </view>
+</view>

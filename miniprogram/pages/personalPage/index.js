@@ -22,37 +22,28 @@ Component({
     StatusBar: app.globalData.StatusBar, 
     CustomBar: app.globalData.CustomBar, 
     userInfo: {}, 
+    ezlUserInfo: {},
     hasUserInfo: false, 
     canIUse: wx.canIUse('button.open-type.getUserInfo') 
   },
   
   lifetimes: {
-    attached: function () { 
+
+    attached: function () {
       if (app.globalData.userInfo) { 
         this.setData({
-          userInfo: app.globalData.userInfo, 
+          userInfo: app.globalData.userInfo,
+          ezlUserInfo: app.globalData.ezlUserInfo,
           hasUserInfo: true 
         })
-      } else if (this.data.canIUse){ 
+      } else if (this.data.canIUse) { 
         app.userInfoReadyCallback = res => { 
           this.setData({
             userInfo: res.userInfo,
             hasUserInfo: true 
           }) 
         }
-      } else { 
-        // 在没有 open-type=getUserInfo 版本的兼容处理 
-        wx.getUserProfile({ 
-          desc: "用于完善资料",
-          success: res => { 
-            app.globalData.userInfo = res.userInfo 
-            this.setData({ 
-              userInfo: res.userInfo, 
-              hasUserInfo: true 
-            }) 
-          } 
-        }) 
-      } 
+      }
     },
   },
 
@@ -74,6 +65,12 @@ Component({
         })
       }
         console.log(e.detail)
+    },
+
+    toUserMsg() {
+      wx.navigateTo({
+        url: '../personalPage/userMsg/index',
+      })
     },
 
     toContactUs: function() {
@@ -133,7 +130,24 @@ Component({
             hasUserInfo: true 
           })
         }
-      })
+      }),
+      this.setData({ezlUserInfo: app.globalData.ezlUserInfo});
+      // wx.login({
+      //   timeout: 5000,
+      //   success: (res) => {
+      //     //垃圾版登录 返回ezlUserInfo
+      //     wx.request({
+      //       url: 'http://39.107.238.42:8080/user/login',
+      //       data: {
+      //         code: res.code
+      //       },
+      //       success: function(res) {
+      //         console.log(res.data)
+      //       }
+      //     })
+      //     console.log(res)
+      //   }
+      // })
     }
   }
 }) 

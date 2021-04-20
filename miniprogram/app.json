@@ -18,7 +18,9 @@
     "pages/personalPage/contactManager/index",
     "pages/personalPage/contactCS/index",
     "pages/home/chooseIdentity/teacher",
-    "pages/home/chooseIdentity/student"
+    "pages/home/chooseIdentity/student",
+    "pages/personalPage/userMsg/index",
+    "pages/personalPage/completeInfo/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
