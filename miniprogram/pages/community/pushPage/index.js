@@ -316,7 +316,24 @@ isCard(e) {
 
   },
 
+  
+
   /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },  onReachBottom: function () {
+    var addCardCount = 4;
+    var newCardCount = this.data.cardCount+addCardCount;
+    this.setData({
+      cardCount: newCardCount
+    });
+    console.log('页面划到底端XXXXX');
+    console.log(this.data.cardCount);
+  },
+  methods:{
+    /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
@@ -327,12 +344,6 @@ isCard(e) {
     });
     console.log('页面划到底端XXXXX');
     console.log(this.data.cardCount);
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  }
   }
 })

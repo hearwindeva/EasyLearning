@@ -27,6 +27,6 @@
     <button class="cu-btn bg-green shadow-blur round">搜索</button>
   </view>
 </view>
-<localPage wx:if="{{TabCur=='localPage'}}"></localPage>
-<pushPage wx:if="{{TabCur=='pushPage'}}"></pushPage>
-<timePage wx:if="{{TabCur=='timePage'}}"></timePage>
+<localPage class="localPage"wx:if="{{TabCur=='localPage'}}"></localPage>
+<pushPage class="pushPage"wx:if="{{TabCur=='pushPage'}}"></pushPage>
+<timePage class="timePage" wx:if="{{TabCur=='timePage'}}"></timePage>

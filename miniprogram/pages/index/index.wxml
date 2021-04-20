@@ -1,7 +1,7 @@
 <!--index.wxml-->
-<home wx:if="{{PageCur=='home'}}"></home>
-<community wx:if="{{PageCur=='community'}}"></community>
-<personalPage wx:if="{{PageCur=='personalPage'}}"></personalPage>
+<home class="home" wx:if="{{PageCur=='home'}}"></home>
+<community class="community" wx:if="{{PageCur=='community'}}"></community>
+<personalPage class="personalPage" wx:if="{{PageCur=='personalPage'}}"></personalPage>
 <view class="cu-bar tabbar bg-white shadow foot">
   <view class="action {{PageCur=='home'?'text-purple':'text-gray'}}"bindtap="NavChange" data-cur="home">
     <view class="{{PageCur=='home'?'cuIcon-homefill':'cuIcon-home'}}"></view> 首页

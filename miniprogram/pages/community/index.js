@@ -8,13 +8,13 @@ Page({
    */
   data: {
     TabCur: 'localPage',
-    TabId:0,
-    scrollLeft:0,
-    cardCount :4,
+    TabId: 0,
+    scrollLeft: 0,
+    cardCount: 4,
     cardData: [{
-      Icon:'',
-      name:'',
-      description:'',
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -29,10 +29,10 @@ Page({
         type: 'image',
         url: 'https://img2.huashi6.com/images/resource/2015/04/25/5000h7268p0.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -51,10 +51,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -69,10 +69,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -91,10 +91,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -109,10 +109,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -131,10 +131,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -149,10 +149,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -171,10 +171,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -189,10 +189,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -211,10 +211,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -229,10 +229,10 @@ Page({
         type: 'image',
         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
       }],
-    },{
-      Icon:'',
-      name:'',
-      description:'',
+    }, {
+      Icon: '',
+      name: '',
+      description: '',
       text: '',
       swiperList: [{
         id: 0,
@@ -266,29 +266,29 @@ Page({
       url: 'https://img2.huashi6.com/images/resource/2015/04/25/5000h7268p0.jpg?imageView2/3/q/100/interlace/1/w/1600/h/1600/format/webp'
     }]
   },
-    gridCol: 3,
-    skin: false,
-    ToSearch: function () {
-      wx.navigateTo({
-        url: '/pages/community/searchIndexPage/index',
-      })
-    },
+  gridCol: 3,
+  skin: false,
+  ToSearch: function () {
+    wx.navigateTo({
+      url: '/pages/community/searchIndexPage/index',
+    })
+  },
   isCard(e) {
     this.setData({
       isCard: e.detail.value
     })
   },
-/**
- * 导航栏被选择
- */
+  /**
+   * 导航栏被选择
+   */
   tabSelect(e) {
     this.setData({
       TabCur: e.currentTarget.dataset.cur,
-      TabId:e.currentTarget.dataset.id,
-      scrollLeft: (e.currentTarget.dataset.id-1)*60,
+      TabId: e.currentTarget.dataset.id,
+      scrollLeft: (e.currentTarget.dataset.id - 1) * 60,
     });
-      console.log("导航栏被点击");
-      console.log(this.data.TabCur);
+    console.log("导航栏被点击");
+    console.log(this.data.TabCur);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -328,20 +328,27 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  },
-
-
+  onPullDownRefresh: function () {},
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function () {},
+  onReachBottom: function () {
+    console.log("community上拉触底");
+    if (this.data.TabCur == 'pushPage') {
+      this.selectComponent('.pushPage').onReachBottom()
+    }
   },
-  
+  methods: {
+    /**
+     * 页面上拉触底事件的处理函数
+     */
+    onReachBottom: function () {
+      console.log("community上拉触底");
+      if (this.data.TabCur == 'pushPage') {
+        this.selectComponent('.pushPage').onReachBottom()
+      }
+    }
+  }
+
 })
